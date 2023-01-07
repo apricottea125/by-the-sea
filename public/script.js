@@ -45,6 +45,8 @@ function showdetail() {
     }
     // detaildisplays.style.display = "block";
   }
+
+
   
 // FOR PHONE CALL BUTTON
 const phoneCallBtn = document.getElementById("phoneCallBtn");
