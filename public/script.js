@@ -21,9 +21,11 @@ function openModal() {
 }
 function closeModal() {
   modal.style.display = 'none';
-  stuff1.textcontent = "";
-  stuff2.textcontent = "";
-  stuff3.textcontent = "";
+  stuff0.value = "";
+  stuff1.value = "";
+  stuff2.value = "";
+  stuff3.value = "";
+  stuff4.value = "";
   const divChildren = document.getElementsByClassName("modstuff")[0].children;
   for (let i=1; i<divChildren.length; i++) {
     divChildren[i].style.display = "none";
@@ -118,20 +120,25 @@ addMedBtn.addEventListener("click", function() {
   // add event listener for the container div
   containerDiv.onclick = function() {
     const contents = document.createElement("div");
+    // image
     img2.classList.add("showMedPic");
     contents.classList.add("showMedModalContent");
-    // image, date, administer
+    // date
     contents.append(img2);
     const date = document.createElement("p");
-    date.textContent = dateValue;
+    const d = new Date(dateValue);
+    date.textContent = "Start Date and Time: " + d.toLocaleString();    
     date.classList.add("date");
     contents.append(date)
+    // frequency
     const freq = document.createElement("p");
-    freq.textContent = freqValue;
+    freq.textContent = "Frequency: Every " + freqValue + " Days";
     freq.classList.add("freq");
     contents.append(freq);
+
+    // administer
     const administer = document.createElement("p");
-    administer.textContent = administerValue;
+    administer.textContent = "How to administer: " + administerValue;
     administer.classList.add("administer");
     contents.append(administer);
     showMedInfo(nameValue, contents);
