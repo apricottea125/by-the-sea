@@ -11,6 +11,7 @@ const stuff0 = document.getElementById("medpic");
 const stuff1 = document.getElementById('stuff1');
 const stuff2 = document.getElementById('stuff2');
 const stuff3 = document.getElementById('stuff3');
+const stuff4 = document.getElementById('stuff4');
 const addMedBtn = document.getElementById("addmedbtn");
 const modalTitle = document.getElementById("modTitle");
 
@@ -100,8 +101,9 @@ addMedBtn.addEventListener("click", function() {
   nameValue = stuff1.value.substring(0,30);
   name.textContent = nameValue;
 
-  // date
+  // when
   dateValue = stuff2.value;
+  freqValue = stuff4.value;
 
   // how administer
   administerValue = stuff3.value;
@@ -124,6 +126,10 @@ addMedBtn.addEventListener("click", function() {
     date.textContent = dateValue;
     date.classList.add("date");
     contents.append(date)
+    const freq = document.createElement("p");
+    freq.textContent = freqValue;
+    freq.classList.add("freq");
+    contents.append(freq);
     const administer = document.createElement("p");
     administer.textContent = administerValue;
     administer.classList.add("administer");
@@ -135,6 +141,9 @@ addMedBtn.addEventListener("click", function() {
 // FOR PHONE CALL BUTTON
 const phoneCallBtn = document.getElementById("phoneCallBtn");
 phoneCallBtn.addEventListener("click", async function() {
+    modalTitle.style.display = "block";
+    modalTitle.textContent = "Called the registered number!";
+    openModal();
     const result = await fetch("http://localhost:3000/",{
         method: "POST",
         headers: {
@@ -161,7 +170,7 @@ baiodine.addEventListener("click", function() {
   // image, date, administer
   contents.append(img);
   const date = document.createElement("p");
-  date.textContent = "January 8, 2023";
+  date.textContent = "Every Sunday starting from January 8, 2023";
   date.classList.add("date");
   contents.append(date)
   const administer = document.createElement("p");

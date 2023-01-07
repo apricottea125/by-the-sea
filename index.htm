@@ -34,17 +34,21 @@
           <h3 id="name" class="detaildisplay"></h3>
           <p id="when" class="detaildisplay"></p>
           <p id="how" class="detaildisplay"></p>
-          <label for="medpic">upload medicine photo:</label>
-        <input type="file"
-       id="medpic"
-       accept="image/*">
-       <label for="stuff1">Input medicine name:</label>
-          <input type="text" id="stuff1" class="inputs" placeholder="medicine title"></input>
-          <label for="stuff2">Input time to take medicine:</label>
-          <input type="datetime-local" class="inputs" id="stuff2" placeholder="when to take medicine"></input>
-          <label for="stuff3">Input medicine administration method:</label>
-          <input type="text" class="inputs" id="stuff3" placeholder="medicine administry"></input>
-          <button id="addmedbtn">Add medicine</button>
+
+       <label for="stuff1">Name:</label>
+       <input type="text" id="stuff1" class="inputs" placeholder="Medicine Title"></input>
+
+       <label for="medpic">upload medicine photo:</label>
+       <input type="file"
+      id="medpic"
+      accept="image/*">
+      <label for="stuff2">Date and Time</label>
+      <input type="datetime-local" class="inputs" id="stuff2" placeholder="Start Date and Time"></input>
+      <label for="stuff4">Frequency (Days)</label>
+      <input type="number" class="inputs" id="stuff4" placeholder="Frequency To Take Medicine"></input>
+      <label for="stuff3">Input medicine administration method:</label>
+      <input type="text" class="inputs" id="stuff3" placeholder="medicine administry"></input>
+      <button id="addmedbtn">Add medicine</button>
         </div>
         </div>
 
