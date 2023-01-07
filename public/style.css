@@ -20,7 +20,8 @@
   
     #phoneCallBtn{
       margin-top:500px;
-      margin-left: 50px;
+      margin-right: 10px;
+      float: right;
     }
   
     #addbtn {
@@ -88,9 +89,26 @@
       height: 100px; /* adjust height to fit within square */
     }
     
-    
+  .showMedPic{
+    width: 350px;
+    height: 300px;
+  } 
   
-  
+  .date{
+   float: right;
+   font-size: 40px;
+   margin-right: 160px;
+  }
+  /* .administer{
+    float:right;
+    font-size: 50px;
+    margin-right: 160px;
+    } */
+  .showMedModalContent{
+    height: 100%;
+    width: 100%;
+  }
+ 
   .mod {
     background: linear-gradient(to bottom, #4b0082, #380a42);
       color: #ffffff; /* white */
