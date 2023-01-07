@@ -38,7 +38,6 @@
     #phoneCallBtn {
       margin-top: 15px;
       margin-right: 40px;
-      float: right;
       background-color: #ff0066; /* bright pink */
       border: none;
       color: #ffffff; /* white */
@@ -58,7 +57,7 @@
       color:#ff0066;
       transition: linear 0.s;
     }
-    
+
     .medblocks {
       margin-top: 40px;
       margin-left:30px;
