@@ -46,7 +46,23 @@ function showdetail() {
     // detaildisplays.style.display = "block";
   }
 
-
+// add medicine button implementation
+const addMedBtn = document.getElementById("addmedbtn");
+console.log(addMedBtn);
+addMedBtn.addEventListener("click", function() {
+  // create new div
+  const containerDiv = document.createElement("div");
+  containerDiv.classList.add("medblocks");
+  const img = document.createElement("img");
+  img.classsList.add("medphotos");
+  const nameDiv = document.createElement("div");
+  const name = document.createElement("h4");
+  name.textContent = "MED NAME HERE";
+  nameDiv.append(name);
+  containerDiv.append(img);
+  containerDiv.append(nameDiv);
+  document.getElementById("parents").append(containerDiv);
+});
   
 // FOR PHONE CALL BUTTON
 const phoneCallBtn = document.getElementById("phoneCallBtn");

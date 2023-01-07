@@ -13,6 +13,8 @@ const bodyParser = require("body-parser")
 
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+// Serve static files from the 'public' directory
+app.use(express.static('public'));
 
 // function to call someone
 async function callPatient(phoneNumber, message) {
@@ -89,13 +91,17 @@ app.post('/login', async (req, res) => {
     res.sendFile(__dirname + "/success.htm");
 });
 
+app.post("/", async (req,res) => {
+    const {phoneNumber} = req.body;    
+    await callPatient(phoneNumber, "Take your medicine!");
+});
+
 app.get('/protected', async (req, res) => {
     // Get the token from the request header
     const { authorization } = req.headers;
     if (!authorization) {
         return res.status(401).json({ error: 'No authorization token provided' });
     }
-
     // Verify the token
     try {
         const decoded = jwt.verify(authorization, process.env.JWT_SECRET);
