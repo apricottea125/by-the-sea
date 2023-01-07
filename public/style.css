@@ -19,7 +19,7 @@
     }
   
     #phoneCallBtn{
-      margin-top:50px;
+      margin-top:500px;
       margin-left: 50px;
     }
   
@@ -36,7 +36,7 @@
     }
   
     #phoneCallBtn {
-      margin-top: 6px;
+      margin-top: 15px;
       margin-right: 40px;
       float: right;
       background-color: #ff0066; /* bright pink */
@@ -46,6 +46,18 @@
       padding: 20px 40px;
       cursor: pointer;
     }
+  
+    #phoneCallBtn:hover{
+      background-color: #cfbcc7;
+      color:#ff0066;
+      transition: linear 0.2s;
+    }
+  
+    #addbtn:hover{
+      background-color:#cfbcc7;
+      color:#ff0066;
+      transition: linear 0.s;
+    }
     
     .medblocks {
       margin-top: 40px;
@@ -54,8 +66,15 @@
       height: 300px; /* adjust height to desired square size */
       float: left;
       font-size: 24px;
+      background-color: #000066;
+      border:5px solid white;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transition: box-shadow 0.5s;
     }
     
+    .medblocks:hover{
+      box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+    }
     .medphotos {
       width: 100%;
       height: 200px; /* adjust height to fit within square */
@@ -63,6 +82,9 @@
     
     .mednames {
       color: #ffffff; /* white */
+      display:flex;
+      justify-content: center;
+      font-size: 40px;
       background-color:#ff0066; /* light pink */
       height: 100px; /* adjust height to fit within square */
     }
@@ -71,7 +93,7 @@
   
   
   .mod {
-      background-color: #663399; /* purple */
+    background: linear-gradient(to bottom, #4b0082, #380a42);
       color: #ffffff; /* white */
       width: 70%;
       height: 70%;
@@ -124,5 +146,6 @@
     }
     
     #addmedbtn:hover {
-      background-color: #ff99cc; /* light pink */
+      background-color: #cfbcc7; /* light pink */
+      color:#ff0066;
     }
