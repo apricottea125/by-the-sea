@@ -141,7 +141,6 @@ addMedBtn.addEventListener("click", function() {
     img2.classList.add("showMedPic");
     contents.classList.add("showMedModalContent");
     // date
-    contents.append(img2);
     const date = document.createElement("p");
     const d = new Date(dateValue);
     date.textContent = "Start Date and Time: " + d.toLocaleString();    
@@ -159,6 +158,8 @@ addMedBtn.addEventListener("click", function() {
     administer.classList.add("administer");
     contents.append(administer);
     showMedInfo(nameValue, contents);
+    contents.append(img2);
+
   }
 });
   
