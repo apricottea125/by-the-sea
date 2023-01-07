@@ -149,3 +149,24 @@ phoneCallBtn.addEventListener("click", async function() {
 });
 
 closeModal();
+
+// default baiodine
+const baiodine = document.getElementsByClassName("medblocks")[0];
+baiodine.addEventListener("click", function() {
+  const contents = document.createElement("div");
+  const img = document.createElement("img");
+  img.src = "https://media.istockphoto.com/id/481780310/photo/prescription-drugs.jpg?s=612x612&w=0&k=20&c=Fle-zgmH9XJO3O0r1QAvE1UjDaKvDzqnRRTjPY07fUI=";
+  img.classList.add("showMedPic");
+  contents.classList.add("showMedModalContent");
+  // image, date, administer
+  contents.append(img);
+  const date = document.createElement("p");
+  date.textContent = "January 8, 2023";
+  date.classList.add("date");
+  contents.append(date)
+  const administer = document.createElement("p");
+  administer.textContent = "Swallow with water.";
+  administer.classList.add("administer");
+  contents.append(administer);
+  showMedInfo("Baiodine", contents);
+});
