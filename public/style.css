@@ -90,7 +90,7 @@
     }
     
   .showMedPic{
-    width: 350px;
+    width: 400px;
     height: 300px;
   } 
   
@@ -99,16 +99,18 @@
    font-size: 40px;
    margin-right: 160px;
   }
-  /* .administer{
-    float:right;
-    font-size: 50px;
+  .administer{
+    font-size: 37px;
     margin-right: 160px;
-    } */
+    } 
   .showMedModalContent{
     height: 100%;
     width: 100%;
   }
  
+  .dateSpan{
+    float: right;
+  }
   .mod {
     background: linear-gradient(to bottom, #4b0082, #380a42);
       color: #ffffff; /* white */
@@ -149,6 +151,10 @@
     .detaildisplay{
       display:none;
     }
+
+    #modTitle{
+      font-size: 45px;
+    }
     #addmedbtn {
       background-color: #ff0066; /* bright pink */
       border: none;
@@ -166,3 +172,7 @@
       background-color: #cfbcc7; /* light pink */
       color:#ff0066;
     }
+  .inputs{
+    margin-left: 40px;
+    margin-bottom: 20px;
+  }

@@ -140,25 +140,32 @@ addMedBtn.addEventListener("click", function() {
     // image
     img2.classList.add("showMedPic");
     contents.classList.add("showMedModalContent");
+    contents.append(img2);
+
     // date
     const date = document.createElement("p");
     const d = new Date(dateValue);
-    date.textContent = "Start Date and Time: " + d.toLocaleString();    
+    date.textContent = d.toLocaleString();    
     date.classList.add("date");
-    contents.append(date)
     // frequency
     const freq = document.createElement("p");
-    freq.textContent = "Frequency: Every " + freqValue + " Days";
+    freq.textContent = "Taken every " + freqValue + " Days";
     freq.classList.add("freq");
-    contents.append(freq);
+
+    // date/frequency in span
+    const span = document.createElement("span");
+    span.append(date);
+    span.append(freq);
+    span.classList.add("dateSpan");
+    contents.append(span);
+
 
     // administer
     const administer = document.createElement("p");
-    administer.textContent = "How to administer: " + administerValue;
+    administer.textContent =  administerValue;
     administer.classList.add("administer");
     contents.append(administer);
     showMedInfo(nameValue, contents);
-    contents.append(img2);
 
   }
 });
