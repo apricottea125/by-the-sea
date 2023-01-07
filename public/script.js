@@ -15,11 +15,27 @@ const stuff4 = document.getElementById('stuff4');
 const addMedBtn = document.getElementById("addmedbtn");
 const modalTitle = document.getElementById("modTitle");
 
+// MODAL DARKEN BACKGROUND
+modal.style.zIndex = 5;
+const darkenBackgroundThing = document.createElement("div");
+darkenBackgroundThing.style.left = 0;
+darkenBackgroundThing.style.top = 0;
+darkenBackgroundThing.style.position = "absolute";
+darkenBackgroundThing.style.zIndex = 1;
+darkenBackgroundThing.style.width = "100vw";
+darkenBackgroundThing.style.height = "100vh";
+darkenBackgroundThing.style.background = "rgba(0,0,0,0.5)";
+darkenBackgroundThing.style.margin = 0;
+darkenBackgroundThing.style.display = "none";
+
 // useful functions
 function openModal() {
   modal.style.display = "block";
+  document.body.style.overflow = "hidden"; 
+  darkenBackgroundThing.style.display = "block";
 }
 function closeModal() {
+  document.body.style.overflow = "auto"; 
   modal.style.display = 'none';
   stuff0.value = "";
   stuff1.value = "";
@@ -30,6 +46,7 @@ function closeModal() {
   for (let i=1; i<divChildren.length; i++) {
     divChildren[i].style.display = "none";
   }
+  darkenBackgroundThing.style.display = "none";
 }
 
 function showdetail() {
@@ -186,3 +203,7 @@ baiodine.addEventListener("click", function() {
   contents.append(administer);
   showMedInfo("Baiodine", contents);
 });
+
+// finish div darken background thing
+document.body.append(darkenBackgroundThing);
+document.body.style.overflow = "hidden"; 
