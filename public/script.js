@@ -80,13 +80,18 @@ addMedBtn.addEventListener("click", function() {
   const img2 = document.createElement("img");
   img.classList.add("medphotos");
   uploadedFile = stuff0.files[0];
-  const reader = new FileReader();
-  reader.addEventListener('load', () => {
-    img.src = reader.result;
-    img2.src = reader.result;
-  });
-  reader.readAsDataURL(uploadedFile);
-
+  if (!uploadedFile) {
+    img.src = "https://media.istockphoto.com/id/481780310/photo/prescription-drugs.jpg?s=612x612&w=0&k=20&c=Fle-zgmH9XJO3O0r1QAvE1UjDaKvDzqnRRTjPY07fUI=";
+    img2.src = "https://media.istockphoto.com/id/481780310/photo/prescription-drugs.jpg?s=612x612&w=0&k=20&c=Fle-zgmH9XJO3O0r1QAvE1UjDaKvDzqnRRTjPY07fUI=";
+  }
+  else {
+    const reader = new FileReader();
+    reader.addEventListener('load', () => {
+      img.src = reader.result;
+      img2.src = reader.result;
+    });
+    reader.readAsDataURL(uploadedFile);
+  }
   // name of medicine 
   const nameDiv = document.createElement("div");
   nameDiv.classList.add("namestuff");
@@ -111,6 +116,7 @@ addMedBtn.addEventListener("click", function() {
   // add event listener for the container div
   containerDiv.onclick = function() {
     const contents = document.createElement("div");
+    img2.classList.add("showMedPic");
     contents.classList.add("showMedModalContent");
     // image, date, administer
     contents.append(img2);
@@ -141,3 +147,5 @@ phoneCallBtn.addEventListener("click", async function() {
             })
     });
 });
+
+closeModal();
