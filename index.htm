@@ -4,19 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Older Adults' Medicine Tracker</title>
-    <link rel="stylesheet" href="/style.css" />
-    <script src="/script.js" defer></script>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
     <!--Additional elements for browsers and robots go here goes here-->
 </head>
 <body>
-     <h1>
-    Grace's  Medicine Tracker
-    </h1>
-   <div id="topbar">
-     <button id="addbtn">
-        Add a new medicine
-     </button>
-    </div>
+    <div class="top-bar">
+        <h1 id="pagetitle">Medicine Tracker</h1>
+        <button id="addbtn">Add Medicine</button>
+      </div>
+
     <div class ="medblocks">
 <img class = "medphotos" height="200px" width="200px">
       <div id="namestuff">
@@ -26,20 +23,22 @@
       </div>
     </div>
 
-      <div id="mod">
-        <div id="modstuff">
-        <img src="">
+      <div class="mod">
+        <div class="modstuff">
           <span id="exitbtn">&times;</span>
-          <h3 id="name"></h3>
-          <p id="when"></p>
-          <p id="how"></p>
+          <h3 id="name" class="detaildisplay"></h3>
+          <p id="when" class="detaildisplay"></p>
+          <p id="how" class="detaildisplay"></p>
           <label for="medpic">upload medicine photo:</label>
         <input type="file"
        id="medpic"
        accept="image/png, image/jpeg">
-          <textarea id="stuff1" placeholder="medicine title"></textarea>
-          <input type="datetime-local" id="stuff2" placeholder="when to take medicine"></input>
-          <textarea id="stuff3" placeholder="medicine administry"></textarea>
+       <label for="stuff1">Input medicine name:</label>
+          <input type="text" id="stuff1" class="inputs" placeholder="medicine title"></input>
+          <label for="stuff2">Input time to take medicine:</label>
+          <input type="datetime-local" class="inputs" id="stuff2" placeholder="when to take medicine"></input>
+          <label for="stuff3">Input medicine administration method:</label>
+          <input type="text" class="inputs" id="stuff3" placeholder="medicine administry"></input>
           <button id="addmedbtn">Add medicine</button>
         </div>
         </div>
